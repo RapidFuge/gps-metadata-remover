@@ -10,7 +10,7 @@ const logLevel = import.meta.env.LOG_LEVEL as LogLevel;
 if (logLevel && LogLevel[logLevel]) { // Check if the provided log level is valid
   Logger.currentLevel = logLevel;
 } else {
-  Logger.currentLevel = LogLevel.Debug; // Default to Info if not specified or invalid
+  Logger.currentLevel = LogLevel.None; // Default to None if not specified or invalid
 }
 
 const isVideo = (uri: string) => /(mp4|m4v|webm|mov)/i.test(uri)
@@ -20,7 +20,7 @@ function removeFileSlashPrefix(path: string): string {
 }
 
 export const removeLocation = async (photoUri: string, read: ReadFunction, write: WriteFunction, options: Options = {}): Promise<boolean> => {
-  const optionsWithDefaults = {skipXMPRemoval: false, ...options}
+  const optionsWithDefaults = { skipXMPRemoval: false, ...options }
   const { skipXMPRemoval } = optionsWithDefaults
   const preparedUri = removeFileSlashPrefix(photoUri)
   return isVideo(preparedUri)
