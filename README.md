@@ -1,6 +1,8 @@
 # `@xoi/gps-metadata-remover`
 > Frontend-friendly Javascript package that removes GPS metadata from images and videos
 
+> This is a fork of [@xoi/gps-metadata-remover](https://www.npmjs.com/package/@xoi/gps-metadata-remover). I recommend using the original version. This version only changes the default LogLevel from debug to none.
+
 Takes a photo or video file and writes over in-place where GPS metadata is detected. Removes
 Exif from images and various forms of GPS metadata from videos.
 

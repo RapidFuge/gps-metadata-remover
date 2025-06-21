@@ -1,6 +1,6 @@
 {
-  "name": "@xoi/gps-metadata-remover",
-  "version": "2.0.0",
+  "name": "@rapidfuge/gps-metadata-remover",
+  "version": "2.0.1",
   "description": "Removes GPS metadata from images and videos",
   "repository": {
     "type": "git",
@@ -42,26 +42,5 @@
     "typecheck": "yarn tsc -p tsconfig.json --noEmit",
     "test-multiple": "for i in {1..10}; do vitest run --disable-console-intercept || (echo 'Failed after $i attempts' && break); done",
     "remove-metadata-batch": "node scripts/batchRemoveMetadata.js"
-  },
-  "keywords": [
-    "exif",
-    "gps",
-    "metadata",
-    "jpeg",
-    "jpg",
-    "mp4",
-    "mov",
-    "png",
-    "tiff",
-    "erase",
-    "delete",
-    "remove",
-    "js",
-    "images",
-    "privacy",
-    "web",
-    "mobile",
-    "geolocation",
-    "location"
-  ]
+  }
 }
